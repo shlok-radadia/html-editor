@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>HTML Editor</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="html_editor.css">
+
+    <!--AWESOME FONT-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--AWESOME FONT-->
+
+    <link rel="icn" type="image/png" href="D:\Computer Projects\HTML Editor\html editor\icon.png">
+  </head>
+
+  <body onload="load()">
+
+    <div id="all_buttons">
+
+    <!--On Clicking this Button, Code will be executed-->
+    <button id="run" onclick="run()">
+      <b>Run <label class="fa fa-play"></label>
+        <!--<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play">
+          <polygon points="5 3 19 12 5 21 5 3">
+          </polygon>
+        </svg>-->
+      </b>
+    </button> 
+    <!--On Clicking this Button, Code will be executed-->
+
+    <!--Font Size-->
+    <div id="font_size1"><b>Font Size</b></div>
+    <select id="font_size" onchange="font_size()">
+      <option value="15px"><b>Default</b></option>
+      <option value="xx-small"><b>XX-Small</b></option>
+      <option value="x-small"><b>X-Small</b></option>
+      <option value="small"><b>Small</b></option>
+      <option value="medium"><b>Medium</b></option>
+      <option value="large"><b>Large</b></option>
+      <option value="x-large"><b>X-Large</b></option>
+      <option value="xx-large"><b>XX-Large</b></option>
+    </select>
+    <!--Font Size-->
+
+    <!--Theme-->
+    <div id="theme1"><b>Theme</b></div>
+    <select id="theme" onchange="theme()">
+      <option value="#222222"><b>Default</b></option>
+      <option value="#ffffff"><b>Light</b></option>
+      <option value="#000000"><b>Dark</b></option>
+    </select>
+    <!--Theme-->
+    
+    <!--Copy Code-->
+    <button id="copy">
+      <b>Copy <label class="fa fa-copy"></label></b>
+    </button>
+    <!--Copy Code-->
+
+    <!--Save Code-->
+    <button id="save">
+      <b>Save <label class="fa fa-download"></label></b>
+    </button>
+    <!--Save Code-->
+    <div id="html_editor_is_back">
+      <b>
+      <label class="H_html">H</label>
+      <label class="T_html">T</label>
+      <label class="M_html">M</label>
+      <label class="L_html">L</label>
+      <label>&nbsp;</label>
+      <label class="E_html">E</label>
+      <label class="D_html">D</label>
+      <label class="I_html">I</label>
+      <label class="T__html">T</label>
+      <label class="O_html">O</label>
+      <label class="R_html">R</label>
+    </b>
+    </div>
+    </div>
+
+
+    <div id="everything">
+
+    <div class="everything_is_here" id="everything_is_here">
+
+    <textarea class="line_number" id="line_number" disabled></textarea>
+
+    <!--Code will be written here-->
+    <textarea wrap="off" spellcheck="false" id="html" placeholder="Don't know how to start? Just type ! and press enter." autofocus></textarea>
+    <!--Code will be written here-->
+
+    </div>
+
+
+    <!--Result After Running the Code-->
+    <iframe id="code"></iframe>
+    <!--Result After Running the Code-->
+
+    </div>
+
+    <!--Javascript-->
+    <script src="run_html_code.js"></script>
+    <script src="save.js"></script>
+    <script src="font_size.js"></script>
+    <script src="theme.js"></script>
+    <script src="copy.js"></script>
+    <script src="keypress.js"></script>
+    <script src="line_count.js"></script>
+    <!--Javascript-->
+  </body>
+</html>
